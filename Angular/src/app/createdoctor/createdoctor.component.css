@@ -1,0 +1,13 @@
+.bg{
+    background-image: url(../../assets/img/gallery/gallery-7.jpg);
+    height: 600px;
+}
+.container{
+    height: auto;
+    background-color: #E5FFFF;
+}
+/* .contact-image{
+    width:auto;
+    height: 100px;
+    border-radius: 50px;
+} */

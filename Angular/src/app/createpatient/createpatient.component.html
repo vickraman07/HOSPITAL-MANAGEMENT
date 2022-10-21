@@ -1,0 +1,55 @@
+<div class="bg">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="h3 fw-bold text-dark my-4">Admit Patient</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <form>
+            <div class="mb-2">
+              <label for="">Patient Name</label>
+              <input name="name" [(ngModel)]="patient.name" required="true" type="text" class="form-control" placeholder="patient name">
+            </div>
+            <div class="mb-2">
+              <label for="">Doctor Name</label>
+              <select class="form-control" [(ngModel)]="patient.doctor_name" name="name">
+                <option *ngFor="let doctor of doctors" value="{{doctor.name}}">{{doctor.name}}</option>
+            </select>
+          </div>
+            <div class="mb-2">
+              <label for="">Date Of Admission</label>
+              <input name="field" required="true" [(ngModel)]="patient.date_of_visit" type="date" class="form-control" placeholder="Enter date of admission">
+            </div>
+            <div class="mb-2">
+              <label for="">Age</label>
+              <input name="age" required="true" [(ngModel)]="patient.age" type="number" class="form-control" placeholder="Enter age">
+            </div>
+            <div class="mb-2">
+              <label for="gender">Choose Gender</label>
+              <select id="gender" class="form-control" [(ngModel)]="patient.gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+       
+            <div class="mb-2">
+              <label for="">Precription</label>
+              <input name="Precription" [(ngModel)]="patient.prescription" name="prescription" required="true" type="text" class="form-control" placeholder="Enter url">
+            </div>
+          
+            <div class="mb-2">
+              <button type="submit" (click)="savePatient()" class="btn btn-dark">Create</button>
+              <a routerLink="/" class="btn btn-light ms-2">Close</a>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <pre>{{patient|json}}</pre> -->
